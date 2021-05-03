@@ -1,0 +1,21 @@
+#body{
+    background-image: url(../img/Cloud-45959.gif);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    text-align: center;
+    align-items: center;
+}
+
+#container-inicio{
+    text-align: center;
+
+}
+
+#container-inicio .card{
+    border: solid 2px black;
+    border-radius: 8px;
+
+}
+
+
+

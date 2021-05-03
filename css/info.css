@@ -1,0 +1,122 @@
+.contenedor-pro {
+    background-image: url(../img/papel.png);
+    background-repeat: no-repeat ;
+    background-size: cover ;  
+    text-align: center;
+    padding-bottom: 100px;
+    
+}
+
+#wave1{
+  
+            position: absolute;
+            bottom: -110px;
+            width: 100%;
+        background-color: transparent;
+
+    
+}
+
+.contenedor-pro h1{
+    padding-top: 150px;
+    padding-bottom: 25px;
+    
+}
+
+
+/* imagen noche estrellada */
+#imagen #noche{
+   margin-left: 50px;
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, .5);
+}
+
+
+
+
+
+
+.contenedor-pro #imagen{
+    display: block;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0px 50px 0px 0px;
+   
+    
+    
+}
+
+.contenedor-pro #imagen img{
+    transition: all 1s;
+}
+.contenedor-pro #imagen img:hover{
+   transform: scale(1.1);
+  
+
+}
+
+
+
+
+.contenedor-pro #fond{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    
+}
+
+
+.informacion p{
+    padding-bottom: 25px ;
+
+}
+
+.row {
+    border-bottom: solid 5px chocolate;
+    margin: 55px 85px 0px 85px;
+}
+
+.row2 .col{
+    margin: 30px 85px 0px 95px;   
+}
+
+.row2 .col {
+    margin: 30px 85px 0px 95px;   
+}
+
+#span1{
+    background: #073561;
+    
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+    height: 35px;
+    padding-bottom: 35px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .5);
+  
+    
+    
+}
+
+
+.informacion{
+    padding-bottom: 200px;
+}
+
+#btn{
+    margin-top: 30px;
+    margin-left: 90px;
+    color: white;
+    background-color: chocolate;
+border-radius: 15px;
+    padding: 10px 15px 10px 15px;
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, .5);
+  
+transition: all 0.2s;
+    
+}
+
+#btn:hover{
+    background: rgba(210, 105, 30, 0.788);
+    
+}

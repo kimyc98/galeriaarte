@@ -1,0 +1,74 @@
+#talleres{
+    background: url(../img/2781-papel\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    
+    padding: 70px;
+    
+}
+
+#talleres h1{
+    text-shadow: 3px 2px 5px rgba(99, 99, 99, 0.623) ;
+    border-bottom: solid 4px rgba(0, 0, 0, 0.336);
+    padding: 50px;
+    
+    
+
+    
+}
+
+#talleres .contenedor-t img{
+    width: 200px;
+    height: 200px;
+    
+    
+   
+}
+
+article{
+    padding: 25px;
+    transition: all 0.5s;
+    border-radius: 40%;
+}
+
+#talleres .contenedor-t{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#talleres .contenedor-t article{
+    margin: 40px;
+}
+
+
+#talleres a{
+    padding-top: 50px;
+    text-align: center;
+    text-shadow: 3px 2px 4px rgba(39, 39, 39, 0.705);
+    text-decoration: none;
+    color: black;
+}
+
+
+
+#talleres a h4{
+    padding-top: 30px;
+    
+}
+
+
+article:hover{
+   
+    
+    
+   
+ transform: scale(1.1);
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgba(99, 99, 99, 0.623) ;
+  border-bottom: outset 4px rgb(194, 158, 0);
+  
+}
+

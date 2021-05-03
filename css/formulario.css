@@ -1,0 +1,92 @@
+
+#formulario{
+    background: rgba(80, 0, 0, 0);
+    padding: 40px;
+    padding-top: 100px;
+  
+    
+}
+
+
+.form-titulo{
+    background: rgba(24, 0, 80, 0.384);
+    font-family: cursive;
+    padding: 20px;
+    text-align: center;
+    border-bottom: solid 2px rgb(255, 255, 255);
+    color: white;
+    /* esquina superior izquiera - ESD - INFD -INFI*/
+    border-radius: 8px 8px 0px 0px ;
+}
+
+
+
+
+.form-registro{
+    background:rgba(157, 187, 250, 0.541);
+    width:95% ;
+    margin: auto;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+
+.contenedor-input{
+    /* arriba y bajo - al lado */
+    padding: 10px 20px;
+    display: block;
+   
+    /* justifica los espacios a los costadosb  */
+    justify-content: space-between;
+    height: 370px;
+    width: auto;
+
+}
+
+.linkini a{
+    text-decoration: none;
+    color: rgb(3, 99, 143);
+    transition: all 1s; 
+    
+}
+
+.linkini a:hover{
+    
+    padding: 0px 15px 0px 15px;
+    color: rgba(255, 255, 255, 0.445);
+    
+}
+
+
+
+
+
+input{
+padding: 10px;
+margin-bottom: 10px;
+
+}
+
+
+/* creacion de columnas tipo bootstrap */
+
+.col-sm{
+    width: 45%;
+
+}
+
+.col-xl{
+    width: 91%;
+}
+
+/* **************************** */
+
+.btn-registro{
+    background-color: rgba(24, 0, 80, 0.384);
+    border-radius: 7px;
+    margin: auto;
+    cursor: pointer;
+    color: cornsilk;
+    
+      
+}
