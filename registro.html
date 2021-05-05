@@ -118,15 +118,10 @@
                 </div>
 
                 <!--tomar todos los datos y los envia a la pagina web del formulario -->
-                <input class="btn-registro" type="submit" value="Registrar">
+                <input class="btn-registrar" type="submit" value="Registrar">
+                
 
-                <!-- usar como js escribimos antes del body y agregamos el onclick para conectarlo con el mensaje-->
-                <!--para validar algunos datos-->
-                <!-- <input class="btn-registro" type="button" value="Validacion" onclick="validarFormulario()"> -->
-                <input type="button" value="grabar" onclick="grabar()">
-                <!-- el boton grabar, recupera unos datos y los guarda en alguna memoria como el cache, para eso creamos una nueva clase en js usuario -->
-                <input type="button" value="listar" onclick="listar()">
-                <input type="button" value="jquery" id="btnJquery">
+
 
             </div>
 
@@ -135,63 +130,7 @@
 
 
         <script src="js/usuario.js"></script>
-        <script>
-            // para ocupar js necesitamos datos con id
-            // creamos un arreglo para guardar fuera de la funcio a nivel global y creamos un indeice para que vaya aumentando
-            var arreglo = new Array();
-            var index = 0
-            function grabar() {
-                var rut = document.getElementById('txtRut').value;
-                var nombre = document.getElementById('txtNombreCompleto').value;
-                var fecha = document.getElementById('txtFechaNaci').value;
 
-                // crear instancia de usuaruio y guardar los datos, necestiamos importar el js usuario
-                usu = new usuario();
-                usu.setRut(rut);
-                usu.setNombre(nombre);
-                usu.setFecha(fecha);
-                // para ver lo que tenemos guardado
-                // alert(usu.toString());
-                alert(usu.imprimir());
-                // dentro del arreglo guardamos el usuario
-                // FORMATO JSON es universal  para transofrmar el objeto array en un json para que pueda leerlo el navegador
-                // si hacemos otros movivmientos de actualizacion de pagina y cosas asi, el arreglo se mantiene guardado con el json
-                arreglo[index] = JSON.stringify(usu);
-                // guardamos el arreglo con todo lo que tiene en el interior
-                localStorage.setItem('registro', arreglo);
-                index++;
-                alert('grabo');
-
-            }
-            function listar() {
-                // aca parte la tabla en codigo html
-                var tabla = "<table border=1>";
-                // creamos la cabecera, la primera de las filas
-                tabla = tabla + "<tr> <td>Rut</td> <td>NOmbre</td> <td>Fecha</td> </tr>";
-                // recuperamos el registro para crear las filas
-                var datos = localStorage.getItem('registro');
-                //    creamos arreglo
-                var arreglo_temp = new Array();
-                // remplazar la , por el ; asi los registros se separaran con un  ;
-                datos = datos.split("},{").join("};{");
-
-                arreglo_temp = datos.split(";");
-                for (let index = 0; index < arreglo_temp.length; index++) {
-                    // sacar los elementos del arreglo
-                    var reg = arreglo_temp[index];
-                    // para convertirlo en usuario porque estaba en JSON, asi lo podemos separar en nombre rut y fecha
-                    var usu = JSON.parse(reg);
-                    // recuperamos registro tras registro como una nueva fila
-                    tabla = tabla + "<tr> <td>" + usu.rut + "</td> <td>" + usu.nombre + "</td> <td>" + usu.fecha + "</td> </tr>";
-
-                }
-                // aca termina la tabla
-                tabla = tabla + "</table>";
-                // en el interior de 'listado' va a ver un codigo en html, osea la tbla
-                document.getElementById('listado').innerHTML = tabla;
-
-            }
-        </script>
 
 
 

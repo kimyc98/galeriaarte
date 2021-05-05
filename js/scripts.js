@@ -16,12 +16,17 @@ function validarFormulario(){
     if(resp == false){
         return false;
     }
+    
+    
     resp = validaFecha();
     if (resp==false) {
         return false;
     }
     return true;
+
+
 }
+
 
 function validaFecha() {
     var fechaUsuario = document.getElementById('txtFechaNaci').value;
