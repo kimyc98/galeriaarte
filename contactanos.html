@@ -17,7 +17,7 @@
 
     <section id="navv">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-gradient">
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgba(252, 255, 211, 0.404);">
             <div class="container-fluid">
     
                 <!--Estilo para el nombre de la marca o compañia brand-->
@@ -46,7 +46,20 @@
                             <a class="nav-link" href="contactanos.html">Contactanos</a>
                         </li>
     
-                        
+                        <!--se pincha y despliega un combo box-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Ingresar
+                            </a>
+                            <!--elementos del combo box-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
+                                <li><a class="dropdown-item" href="registro.html">Registrarme</a></li>
+                               
+
+                                
+                            </ul>
     
                     </ul>
     
@@ -80,7 +93,7 @@
             </div>
             <div class="mb-3">
                 <label for="txtMensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="txtMensaje" rows="5"></textarea>
+                <textarea class="form-control" id="txtMensaje" placeholder="Escriba algo..." rows="5"></textarea>
             </div>
 
             <input class="btn-registrar" type="submit" value="Enviar">

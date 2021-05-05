@@ -72,3 +72,46 @@ article:hover{
   
 }
 
+
+
+header {
+    width: 100%;
+    height: 700px;
+    
+    background: #654ea3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #ffbeda, #ffbeda);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #ffbedaa2, #251550b2), url(../img/arte.jpg) ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+background-size: cover ;
+background-attachment: fixed;
+position: relative;
+
+
+}
+
+.wave3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  background-color: transparent;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    padding-top: 280px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:rgb(255, 255, 255);
+}
+
+
+

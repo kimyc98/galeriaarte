@@ -8,13 +8,13 @@
     background-size: cover;
    
     
-    font-family: 'Open Sans', sans-serif;
+    
     
 }
 
 #tarjetas{
     background: rgb(255, 255, 255);
-    padding-top: 120px;
+    padding-top: 80px;
     
 }
 
@@ -32,7 +32,7 @@ background-color: transparent;
 .container{
     
     text-align: center;
-    font-family: cursive;
+  
     
     width: 100%;
   
