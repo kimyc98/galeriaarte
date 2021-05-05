@@ -38,7 +38,7 @@
    
     /* justifica los espacios a los costadosb  */
     justify-content: space-between;
-    height: 370px;
+    height: 425px;
     width: auto;
 
 }
@@ -81,7 +81,7 @@ margin-bottom: 10px;
 
 /* **************************** */
 
-.btn-registro{
+.btn-registrar{
     background-color: rgba(24, 0, 80, 0.384);
     border-radius: 7px;
     margin: auto;
