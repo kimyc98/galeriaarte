@@ -3,6 +3,7 @@
     background: rgba(80, 0, 0, 0);
     padding: 40px;
     padding-top: 100px;
+    
   
     
 }
@@ -38,8 +39,9 @@
    
     /* justifica los espacios a los costadosb  */
     justify-content: space-between;
-    height: 425px;
+    height: auto;
     width: auto;
+    margin-top: 25px;
 
 }
 
@@ -57,6 +59,10 @@
     
 }
 
+.linkini{
+    padding-top: 15px;
+}
+
 
 
 
@@ -72,11 +78,18 @@ margin-bottom: 10px;
 
 .col-sm{
     width: 45%;
+    border-radius: 7px;
+
+    
 
 }
 
 .col-xl{
+    
     width: 91%;
+    border-radius: 7px;
+    
+    
 }
 
 /* **************************** */
@@ -90,3 +103,9 @@ margin-bottom: 10px;
     
       
 }
+
+ #formulario2{
+    background: rgba(80, 0, 0, 0);
+    padding: 40px;
+    padding-top: 200px;
+ }

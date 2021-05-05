@@ -1,9 +1,35 @@
 // funciones
 
 function mensaje() {
-    alert('hola mundo');
+   var email = document.getElementById('txtEmail').value;
+   var contra= document.getElementById('txtPass').value;
+
+   if (email == ''){
+       if(contra == ''){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Algo salió mal con el rut!',
+            footer: '<a href>Por que tengo este problema?</a>'
+          })
+
+
+
+
+        
+       }
+   }
+
+   Swal.fire(
+    'Good job!',
+    'You clicked the button!',
+    'success'
+  )
+  
 
 }
+
+
 
 
 
@@ -15,7 +41,7 @@ function validarFormulario(){
     }
     resp = validaFecha();
     if (resp==false) {
-        return
+        return false;
     }
     return true;
 }
