@@ -67,7 +67,7 @@ function validaFecha() {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Algo salio mal con la edad!',
+            text: 'Debes ser mayor de edad!',
             footer: '<a href>Por que tengo este problema?</a>'
           })
         return false;
