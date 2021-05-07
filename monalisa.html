@@ -23,7 +23,7 @@
 
                 <!--Estilo para el nombre de la marca o compañia brand-->
 
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="index.html">
                     <img src="img/palette_color_paint_painting_colors_art_icon_149687 (3).png" alt="">
                     Grupo Zero
                 </a>
@@ -175,6 +175,25 @@
                 <p>Se considera el ejemplo más logrado de sfumato, técnica
                     muy característica de Leonardo.</p>
             </div>
+            <input class="btn-dolar" type="button" value="Dolar" onclick="recuperaDolar() ">
+            <div id="valor_dolar"></div>
+            <script>
+                function recuperaDolar(){
+                    fetch("https://mindicador.cl/api/dolar")
+                    .then(function (response){
+                        if(response.status!=200){
+                            alert("no pudo conectar con el servicio");
+                            return;
+                        }
+                        response.json().then(function(data){
+                            console.log(data);
+                            var dolar=data.serie[0].valor;
+                            document.getElementById('valor_dolar').innerHTML="$"+dolar+" CLP";
+                        })
+                    })
+                }
+            </script>
+
         </div>
 
         <button id="btn">
