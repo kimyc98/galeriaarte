@@ -86,7 +86,7 @@
         <!-- cuando alguien quiera enviar con el onsubmit debe pasar por otra validacion -->
         <!-- si nos lanza un true puede enviar, sino no se envia -->
         <!-- lo del onclick es para el boton validar -->
-        <form class="form-registro" action="" method="post">
+        <form class="form-registro" action="" method="post" onsubmit=" return validarInicio()">
 
 
             <h2 class="form-titulo">Iniciar sesión</h2>
@@ -97,10 +97,10 @@
                 <!--placeholder es el texto en agua, para poder dar funcion se toma el id-->
 
 
-                <input class="col-xl" type="email" name="txtEmail" id="" placeholder="ingrese email " required
+                <input class="col-xl" type="email" name="txtEmail" id="txtEmail" placeholder="ingrese email " required
                     minlength="8">
 
-                <input class="col-xl" type="password" name="txtPass" id="" placeholder="ingrese contraseña" required
+                <input class="col-xl" type="password" name="txtPass" id="txtPass" placeholder="ingrese contraseña" required
                     minlength="5" maxlength="10">
 
 

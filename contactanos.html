@@ -78,14 +78,14 @@
         <!--seccion formulario-->
         <section id="formulario">
 
-            <form class="form-registro" action="" method="post" onsubmit="">
+            <form class="form-registro" action="" method="post" onsubmit=" return validarContacto()">
 
             <h2 class="form-titulo">Contacto General</h2>
 
             <div class="contenedor-input">
                 <div class="mb-3">
                     <label for="txtNombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="txtNombre" placeholder=" Ingrese nombre" required>
+                    <input type="text" class="form-control" id="txtNombreCompleto" placeholder=" Ingrese nombre" required>
                 </div>
             <div class="mb-3">
                 <label for="txtAsunto" class="form-label">Asunto</label>

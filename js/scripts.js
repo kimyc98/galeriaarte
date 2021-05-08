@@ -1,83 +1,58 @@
 // funciones
 
-function mensaje() {
-  alert('hola mundo');
-  
-
-}
-
-
-
-
-
-function validarFormulario(){
-    // validar rut
+function validarFormulario() {
     var resp = validaRut();
-    if(resp == false){
+    if ( resp == false ) {
         return false;
     }
-    
-    
+    resp = validaNombre();
+    if (resp==false) {
+        return false;
+    }
     resp = validaFecha();
     if (resp==false) {
         return false;
     }
-    return true;
-
-
-}
-
-
-function validaFecha() {
-    var fechaUsuario = document.getElementById('txtFechaNaci').value;
-    var fechaSistema = new Date();
-    console.log('Fecha usuario: ' +fechaUsuario);
-    console.log('Fecha sistema: '+fechaSistema);
-    
-// cortamos el año primero ya que ecribe aa/mm/dd
-    var ano = fechaUsuario.slice(0,4);
-    var mes = fechaUsuario.slice(5,7);
-    var dia = fechaUsuario.slice(8,10);
-    console.log('Año: '+ano);
-    console.log('Mes: '+mes);
-    console.log('Dia: '+dia);
-// le restamos 1 al mes ya que la consola en los meses es, enero=0 , febrero=1, etc)
-    var fechaNuevaUsuario = new Date(ano,(mes-1),dia);
-    console.log('Nueva fecha: ' +fechaNuevaUsuario);
-    // fecha ingresada menor a la actual
-    if(fechaNuevaUsuario > fechaSistema){
-        // alert('fecha incorrecta');
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Algo salio mal con la fecha!',
-            footer: '<a href>Por que tengo este problema?</a>'
-          })
+    resp = validaUsuario();
+    if (resp==false) {
         return false;
     }
-    // minimo 18 años
-     var unDia = 24* 60 * 60 *1000; // 1 dia en milisegundos
-     //el get time nos da la info en milisegundos
-    var diferencia = Math.trunc((fechaSistema.getTime() - fechaNuevaUsuario.getTime()) / unDia );
-    console.log('Dias: '+diferencia);
-    var anos = Math.trunc( diferencia/365);
-    console.log('Edad: '+anos);
-    if(anos<18){
-        // alert('es menor de edad, usted tiene '+anos);
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Debes ser mayor de edad!',
-            footer: '<a href>Por que tengo este problema?</a>'
-          })
+    resp = validaPass();
+    if (resp==false) {
+        return false;
+    }
+        return true;    
+}
+
+//Formulario de inicio//
+function validarInicio(){
+    var resp = validaPass();
+    if(resp == false){
+        return false;
+    }
+    return true;
+}
+
+//Formulario de contacto//
+function validarContacto(){
+    resp = validaNombre();
+    if (resp==false) {
+        return false;
+    }
+    resp = validaAsunto();
+    if (resp==false) {
+        return false;
+    }
+    resp = validaMensaje();
+    if (resp==false) {
         return false;
     }
     return true;
 }
 
 
-
-
+//validaciones formulario de registro//
+s
 function validaRut(){
     // recuperamos el documento, el elemento que tiene por id txtRut
     var rut = document.getElementById('txtRut').value;
@@ -136,7 +111,7 @@ function validaRut(){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Algo salió mal con el rut!',
+            text: 'Dígito verificador incorrecto',
             footer: '<a href>Por que tengo este problema?</a>'
           })
         return false;
@@ -144,4 +119,121 @@ function validaRut(){
     return true;
 
 
+}
+
+function validaNombre(){
+    var nombre= document.getElementById("txtNombreCompleto").value;
+    if (nombre.trim().length==0) {
+        //alert("el nombre no puede estar en blanco");
+        Swal.fire({
+            icon: 'error',
+            title: 'Nombre Completo',
+            text: 'el nombre no puede estar en blanco'
+        });
+        return false;
+    }
+    return true;
+}
+
+function validaFecha() {
+    var fechaUsuario = document.getElementById('txtFechaNaci').value;
+    var fechaSistema = new Date();
+    console.log('Fecha usuario: ' +fechaUsuario);
+    console.log('Fecha sistema: '+fechaSistema);
+    
+// cortamos el año primero ya que ecribe aa/mm/dd
+    var ano = fechaUsuario.slice(0,4);
+    var mes = fechaUsuario.slice(5,7);
+    var dia = fechaUsuario.slice(8,10);
+    console.log('Año: '+ano);
+    console.log('Mes: '+mes);
+    console.log('Dia: '+dia);
+// le restamos 1 al mes ya que la consola en los meses es, enero=0 , febrero=1, etc)
+    var fechaNuevaUsuario = new Date(ano,(mes-1),dia);
+    console.log('Nueva fecha: ' +fechaNuevaUsuario);
+    // fecha ingresada menor a la actual
+    if(fechaNuevaUsuario > fechaSistema){
+        // alert('fecha incorrecta');
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Algo salio mal con la fecha!',
+            footer: '<a href>Por que tengo este problema?</a>'
+          })
+        return false;
+    }
+    // minimo 18 años
+     var unDia = 24* 60 * 60 *1000; // 1 dia en milisegundos
+     //el get time nos da la info en milisegundos
+    var diferencia = Math.trunc((fechaSistema.getTime() - fechaNuevaUsuario.getTime()) / unDia );
+    console.log('Dias: '+diferencia);
+    var anos = Math.trunc( diferencia/365);
+    console.log('Edad: '+anos);
+    if(anos<18){
+        // alert('es menor de edad, usted tiene '+anos);
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debes ser mayor de edad!',
+            footer: '<a href>Por que tengo este problema?</a>'
+          })
+        return false;
+    }
+    return true;
+}
+
+function validaUsuario(){
+    var nombre= document.getElementById("txtUsuario").value;
+    if (nombre.trim().length==0) {
+        //alert("el nombre no puede estar en blanco");
+        Swal.fire({
+            icon: 'error',
+            title: 'Usuario',
+            text: 'El usuario no puede quedar vacío.'
+        });
+        return false;
+    }
+    return true;
+}
+
+function validaPass(){
+    var nombre= document.getElementById("txtPass").value;
+    if (nombre.trim().length==0) {
+        //alert("el nombre no puede estar en blanco");
+        Swal.fire({
+            icon: 'error',
+            title: 'Contraseña',
+            text: 'La contraseña no puede contener espacios'
+        });
+        return false;
+    }
+    return true;
+}
+
+function validaAsunto(){
+    var nombre= document.getElementById("txtAsunto").value;
+    if (nombre.trim().length==0) {
+        //alert("el nombre no puede estar en blanco");
+        Swal.fire({
+            icon: 'error',
+            title: 'Asunto',
+            text: 'El asunto no puede quedar vacío'
+        });
+        return false;
+    }
+    return true;
+}
+
+function validaMensaje(){
+    var nombre= document.getElementById("txtMensaje").value;
+    if (nombre.trim().length==0) {
+        //alert("el nombre no puede estar en blanco");
+        Swal.fire({
+            icon: 'error',
+            title: 'Mensaje',
+            text: 'El mensaje no debe queder vacío'
+        });
+        return false;
+    }
+    return true;
 }
