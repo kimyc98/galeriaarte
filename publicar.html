@@ -78,29 +78,44 @@
         <!--seccion formulario-->
         <section id="formulario">
 
-            <form class="form-registro" action="" method="post" onsubmit=" return validarContacto()">
+            <form class="form-registro" action="" method="post" onsubmit=" return validarObra()">
 
-            <h2 class="form-titulo">Contacto General</h2>
+            <h2 class="form-titulo">Publicar obra</h2>
 
             <div class="contenedor-input">
                 <div class="mb-3">
-                    <label for="txtNombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="txtNombreCompleto" placeholder=" Ingrese nombre" required>
+                    <label for="txtNombre" class="form-label">Nombre de la obra</label>
+                    <input type="text" class="form-control" id="txtNombreObra" placeholder=" Ingrese nombre" required>
                 </div>
             <div class="mb-3">
-                <label for="txtAsunto" class="form-label">Asunto</label>
-                <input type="text" class="form-control" id="txtAsunto" placeholder=" Ingrese asunto" required>
-            </div>
-            <div class="mb-3">
-                <label for="txtEmail" class="form-label">Dirección de correo</label>
-                <input type="email" class="form-control" id="txtEmail" placeholder=" Ingrese correo name@example.com" required>
-            </div>
-            <div class="mb-3">
-                <label for="txtMensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="txtMensaje" placeholder="Escriba algo..." rows="5" required></textarea>
+                <label for="txtAsunto" class="form-label">Autor</label>
+                <input type="text" class="form-control" id="txtAutor" placeholder=" Ingrese autor" required>
             </div>
 
-            <input class="btn-registrar" type="submit" value="Enviar">
+
+
+
+
+           
+           
+            <div class="mb-3">
+                <label for="txtMensaje" class="form-label">Descripcion</label>
+                <textarea class="form-control" id="txtDescripcion" placeholder="Escriba algo..." rows="5" required></textarea>
+            </div>
+
+            <label for="txtAdjuntar" class="form-label">Imagen obra</label> <br>
+            <input type="file" name="adjunto" accept=".pdf,.jpg,.png" required multiple />
+
+
+            <div class="mb-3">
+                <label for="txtPrecio" class="form-label">Precio</label>
+                <input class="col-sm" type="number" name="txtPrecio" id="txtPrecio" required placeholder="ej: 54.200 = 54200" minlength="9"
+                maxlength="10" pattern="[0-9]">
+            </div>
+
+           
+
+            <input class="btn-registrar" type="submit" value="Publicar">
 
             </div>
             </form>

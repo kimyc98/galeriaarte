@@ -51,8 +51,28 @@ function validarContacto(){
 }
 
 
+// formulario publicacion
+
+function validarObra(){
+    resp = validaNombreObra();
+    if(resp==false){
+        return false;
+    }
+    resp = validaAutor();
+    if(resp==false){
+        return false;
+
+    }
+    resp = validaDescripcion();
+    if (resp==false) {
+        return false;
+    }
+    return true;
+}
+
+
 //validaciones formulario de registro//
-s
+
 function validaRut(){
     // recuperamos el documento, el elemento que tiene por id txtRut
     var rut = document.getElementById('txtRut').value;
@@ -121,6 +141,9 @@ function validaRut(){
 
 }
 
+
+
+
 function validaNombre(){
     var nombre= document.getElementById("txtNombreCompleto").value;
     if (nombre.trim().length==0) {
@@ -134,6 +157,55 @@ function validaNombre(){
     }
     return true;
 }
+//  validacion nombre obra
+function validaNombreObra(){
+    var nombre= document.getElementById("txtNombreObra").value;
+    if (nombre.trim().length==0) {
+        //alert("el nombre no puede estar en blanco");
+        Swal.fire({
+            icon: 'error',
+            title: 'Nombre de la Obra',
+            text: 'el nombre no puede estar en blanco'
+        });
+        return false;
+    }
+    return true;
+}
+
+
+
+function validaDescripcion(){
+    var nombre= document.getElementById("txtDescripcion").value;
+    if (nombre.trim().length==0) {
+        //alert("el nombre no puede estar en blanco");
+        Swal.fire({
+            icon: 'error',
+            title: 'Descripcion de la obra',
+            text: 'el campo no puede estar en blanco'
+        });
+        return false;
+    }
+    return true;
+}
+
+
+
+function validaAutor(){
+    var nombre= document.getElementById("txtAutor").value;
+    if (nombre.trim().length==0) {
+        //alert("el nombre no puede estar en blanco");
+        Swal.fire({
+            icon: 'error',
+            title: 'Autor de la obra',
+            text: 'el autor no puede estar en blanco'
+        });
+        return false;
+    }
+    return true;
+}
+
+
+
 
 function validaFecha() {
     var fechaUsuario = document.getElementById('txtFechaNaci').value;
