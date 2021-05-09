@@ -1,6 +1,10 @@
 // funciones
 
 function validarFormulario() {
+    var resp = validaRut2();
+    if ( resp == false ) {
+        return false;
+    }
     var resp = validaRut();
     if ( resp == false ) {
         return false;
@@ -74,6 +78,20 @@ function validarObra(){
 
 
 //validaciones formulario de registro//
+function validaRut2(){
+    var nombre= document.getElementById("txtRut").value;
+    if (nombre.trim().length==0) {
+        //alert("el nombre no puede estar en blanco");
+        Swal.fire({
+            icon: 'error',
+            title: 'Rut',
+            text: 'El rut no puede quedar en blanco'
+        });
+        return false;
+    }
+    return true;
+}
+
 
 function validaRut(){
     // recuperamos el documento, el elemento que tiene por id txtRut
