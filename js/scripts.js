@@ -67,7 +67,9 @@ function validarObra(){
     if (resp==false) {
         return false;
     }
-    return true;
+    
+ 
+       return true;
 }
 
 
